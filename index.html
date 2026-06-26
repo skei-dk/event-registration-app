@@ -57,6 +57,16 @@
 
     <div id="participantSection" style="display: none; margin-top: 30px; border-top: 2px solid #e5e7eb; padding-top: 20px;">
         <h2>Registered Participants <span id="participantCount">0</span></h2>
+        <div style="margin-bottom: 20px;">
+            <label for="filterField"><strong>Filter by Study Field:</strong></label>
+            <select id="filterField" onchange="renderParticipants()" style="padding: 6px; border-radius: 4px; width: auto;">
+                <option value="All">All Fields</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Game Design and Development">Game Design and Development</option>
+                <option value="Avitation Management">Avitation Management</option>
+                <option value="International Management">International Management</option>
+            </select>
+        </div>
         <ul id="participantList" style="list-style-type: none; padding: 0;">
 
         </ul>

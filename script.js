@@ -94,9 +94,16 @@ function renderParticipants() {
         section.style.display = "none"; 
     }
 
+    const filterValue = document.getElementById("filterField").value;
+
     list.innerHTML = "";
 
     participants.forEach(function(person, index) {
+
+        if(filterValue !== "All" && person.studyField !== filterValue) {
+            return
+        }
+
         const li = document.createElement("li");
 
         li.className = "participant-card";
