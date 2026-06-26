@@ -57,7 +57,7 @@ registrationForm.addEventListener("submit", function() {
         Student: ${firstName} ${lastName}<br>
         Email: ${email}<br>
         Age: ${age}<br>
-        Study field: ${studyField}<br>
+        Technology Field: ${studyField}<br>
         `;
 
     registrationForm.reset();
