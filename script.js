@@ -96,16 +96,31 @@ function renderParticipants() {
 
     list.innerHTML = "";
 
-    participants.forEach(function(person) {
+    participants.forEach(function(person, index) {
         const li = document.createElement("li");
 
         li.className = "participant-card";
 
         li.innerHTML = `
-            <strong>${person.firstName} ${person.lastName}</strong> Age: ${person.age}<br>
-            <span class="participant-details">${person.email} • ${person.studyField}</span>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <strong>${person.firstName} ${person.lastName}</strong> (Age: ${person.age})<br>
+                    <span class="participant-details">${person.email} • ${person.studyField}</span>
+                </div>
+                <button onclick="deleteParticipant(${index})" style="background: #ef4444; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; width: auto;">Delete</button>
+            </div>
         `;
 
         list.appendChild(li);
     });
+}
+
+
+function deleteParticipant(indexToRemove) {
+    participants.splice(indexToRemove, 1);
+
+    message_box.className = "message-box success";
+    message_box.innerHTML = "<strong>Participant was remowed!</strong>"
+    
+    renderParticipants(); 
 }
