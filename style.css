@@ -88,15 +88,17 @@ button:active{
 }
 .message-box.error{
     display: block;
-    border: 1.5px solid rgb(219, 53, 41);
-    background-color: rgb(216, 98, 98);
+    border: 1.5px solid rgb(211, 92, 84);
+    background-color: rgb(253, 202, 202);
     padding: 12px;
     margin: 12px auto;
+    border-radius: 8px;
 }
 .message-box.success{
     display: block;
-    border: 1.5px solid rgb(43, 192, 32);
-    background-color: rgb(104, 216, 98);
+    border: 1.5px solid rgb(100, 202, 92);
+    background-color: rgb(211, 255, 208);
     padding: 12px;
     margin: 12px auto;
+    border-radius: 8px;
 }
