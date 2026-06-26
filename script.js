@@ -55,3 +55,18 @@ registrationForm.addEventListener("submit", function() {
         Study field: ${studyField}<br>
         `;
 });
+
+let participants = [];
+
+function addParticipant(fName, lName, userEmail, userAge, field) {
+    const newParticipant = {
+        firstName: fName,
+        lastName: lName,
+        email: userEmail,
+        age: userAge,
+        studyField: field
+    };
+
+    participants.push(newParticipant);
+    console.log("Database updated:", participants);
+}
