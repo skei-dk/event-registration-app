@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: FAF9F6;
+}
+main{
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 12px;
+    background: rgb(245, 245, 220);
+    border-radius: 8px;
+}
+h1 {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+.description {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1,5;
+}
+#image{
+    display: block;
+    margin: 16px auto;
+}
+label{
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+select, input{
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid darkgray;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+select:hover, input:hover {
+    border-color: silver;
+}
+select:focus, input:focus{
+    border-color: silver;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 6px 0 rgba(169, 169, 169, 0.3);
+}
+.check-group{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    justify-content: center;
+}
+.check-group label{
+    font-weight: 300;
+}
+#terms{
+    width: auto;
+}
+button{
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1.5px solid darkgray;
+    color: dimgray;
+    background-color: #fafafa;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+button:hover{
+    border-color: dimgray;
+    background-color: #f0f0f0;
+}
+button:active{
+    transform: scale(0.98);
+}
+.message{
+    display: none;
+}
+.message.error{
+    display: block;
+    border: 1.5px solid rgb(219, 53, 41);
+    background-color: rgb(216, 98, 98);
+    padding: 12px;
+    margin: 12px auto;
+}
+.message.success{
+    display: block;
+    border: 1.5px solid rgb(43, 192, 32);
+    background-color: rgb(104, 216, 98);
+    padding: 12px;
+    margin: 12px auto;
+}
