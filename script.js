@@ -46,6 +46,8 @@ registrationForm.addEventListener("submit", function() {
         return;
     }
 
+    addParticipant(firstName, lastName, email, age, studyField);
+
     message_box.className = "message-box success";
     message_box.innerHTML = `
         <strong>Application accepted!</strong><br>
@@ -54,6 +56,8 @@ registrationForm.addEventListener("submit", function() {
         Age: ${age}<br>
         Study field: ${studyField}<br>
         `;
+
+    registrationForm.reset();
 });
 
 let participants = [];
