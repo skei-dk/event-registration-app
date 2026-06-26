@@ -26,6 +26,9 @@ registrationForm.addEventListener("submit", function() {
     if (email === "") {
         errorList.push("Email is missing.");
     }
+    else if(!email.includes("@")){
+        errorList.push("Email has to include @");
+    }
     if (age === ""){
         errorList.push("Age is missing.")
     }
@@ -72,5 +75,37 @@ function addParticipant(fName, lName, userEmail, userAge, field) {
     };
 
     participants.push(newParticipant);
+    renderParticipants(newParticipant);
     console.log("Database updated:", participants);
+}
+
+
+function renderParticipants() {
+    
+    const section = document.getElementById("participantSection");
+    const countSpan = document.getElementById("participantCount");
+    const list = document.getElementById("participantList");
+
+    countSpan.textContent = participants.length;
+
+    if (participants.length > 0) {
+        section.style.display = "block";
+    } else {
+        section.style.display = "none"; 
+    }
+
+    list.innerHTML = "";
+
+    participants.forEach(function(person) {
+        const li = document.createElement("li");
+
+        li.className = "participant-card";
+
+        li.innerHTML = `
+            <strong>${person.firstName} ${person.lastName}</strong> Age: ${person.age}<br>
+            <span class="participant-details">${person.email} • ${person.studyField}</span>
+        `;
+
+        list.appendChild(li);
+    });
 }
