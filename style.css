@@ -83,17 +83,17 @@ button:hover{
 button:active{
     transform: scale(0.98);
 }
-.message{
+.message-box{
     display: none;
 }
-.message.error{
+.message-box.error{
     display: block;
     border: 1.5px solid rgb(219, 53, 41);
     background-color: rgb(216, 98, 98);
     padding: 12px;
     margin: 12px auto;
 }
-.message.success{
+.message-box.success{
     display: block;
     border: 1.5px solid rgb(43, 192, 32);
     background-color: rgb(104, 216, 98);
